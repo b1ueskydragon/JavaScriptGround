@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>文字数テスト</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
+  <body>
+      <input id="test" type="text" name="" value="" placeholder="ここに文字を入力">
+      <p>半角文字数:<span id="hanakaku">0</span></p>
+      <p>全角文字数:<span id="zenkaku">0</span></p>
+  </body>
+
+  <script type="text/javascript">
+
+  $('#test').on('keyup keydown change',function() {
+    var hankakuCount = 0;
+    var zenkakuCount = 0;
+    var str = this.value; //入力された文字を取得
+    var splitStr = str.split(''); //入力された文字を一文字ずつ分割して、配列にする
+    $.each(splitStr, function(index, val){
+      if(val.match(/[0-9A-Za-z]+/)){ //半角文字の場合
+        hankakuCount++;
+      } else {
+        zenkakuCount++;
+      }
+    });
+
+    $('#hanakaku').empty();
+    $('#zenkaku').empty();
+
+    $('#hanakaku').append(hankakuCount);
+    $('#zenkaku').append(zenkakuCount);
+
+
+  if (hankakuCount >= 5){
+    //event.returnValue = false;
+     var key = event.keyCode || event.charCode;
+     if( key != 8) // バックスペース以外は全て無効化 (keydown ないとだめ)
+     return false;
+  };
+
+  });
+
+  </script>
+</html>
