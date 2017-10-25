@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> ちゃんくえり </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+	<body>
+		<span>[0]</span>
+		<input id="selector_zero" type="text" name="" value="" placeholder="please input 'kamata-san'">
+		<br>
+		<span>[1]</span>
+		<input id="selector_one" type="text" name="" value="" placeholder="push a button">
+		<input id="magic-butt" type="button" value="魔法のボタン">
+		<br>
+		<hr>
+		<span>[2]</span>
+		<input id="selector_two" type="text" name="" value="" placeholder="Let's count">
+		<div>半角文字数: <span id="half-cnt">0</span></div>
+		<div>全角文字数: <span id="full-cnt">0</span></div>
+	</body>
+
+	 <script type="text/javascript">
+		 var $_zero = $("input#selector_zero");
+		 $($_zero).on('keyup keydown change',function() {
+			if ( $_zero.val() === "kamata-san") {
+		 		$_zero.attr("disabled", "disabled");
+		 		$_zero.hide('swing');
+	      	}
+		 });
+
+		 var $_one = $("input#selector_one");
+		 var $_magic = $("input#magic-butt");
+		 $($_magic).on('mousedown', function() {
+		 	$_one.hide('blind');
+		 	$_magic.val("double-click");
+		 });
+
+		 // var delayMillis = 1000;
+		 // setTimeout(function() {}, delayMillis);
+
+		 $($_magic).on('dblclick', function() {
+			$_one.show('blind');
+			$_magic.val("魔法のボタン");
+		});
+
+		var $_two = $("input#selector_two");
+		var counter = {
+			// TODO To be Continue... counter etc.
+		};
+		$_two.on('keyup keydown change', counter);
+	</script>
+</html>
