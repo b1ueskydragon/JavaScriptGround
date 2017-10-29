@@ -61,7 +61,7 @@ $(document).ready(function(){
 	
 	var $_inagon = $("img#inagon");
 	$_inagon.on('mouseover', function(){
-	  alert("あ！");
+	  $_inagon.draggable();
 	});
 	
 });

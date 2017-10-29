@@ -1,3 +1,9 @@
+body{
+  font-family: sans-serif;
+}
+p{
+  color: #1e90ff;
+}
 img#inagon {
   width: 20%;
   height: 20%;
