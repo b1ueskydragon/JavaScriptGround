@@ -58,10 +58,31 @@ $(document).ready(function() {
 	// $_two.on(pressEnter, function (){
 	// 	alert($_two.val().length + "文字");
 	// });
+
+    var $great = $("input#great-butt");
+	var $three = $("input#selector_thr");
+	$great.on('mousedown', function() {
+		$three.toggle('blind');
+	});
+
+	var $great2 = $("input#great-butt2");
+	var $four = $("input#selector_four");
+	$great2.on('mousedown', function() {
+		if($four.is(':visible')) {
+			$four.hide('swing');
+		} else {
+			$four.show('swing');
+		}
+	});
+	
+
 	
 	var $inagon = $("img#inagon");
 	$inagon.on('mouseover', function() {
 	  $inagon.draggable();
+	  $inagon.css({'opacity' : '0.8'});
+	}).on('mouseout', function(){
+		$inagon.css({'opacity' : '1.0'});
 	});
 	
 });
