@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 	 var $_zero = $("input#selector_zero");
 	 $($_zero).on('keyup keydown change',function() {
 		if ( $_zero.val() === "kamata-san") {
@@ -10,8 +10,8 @@ $(document).ready(function(){
 	 var $_one = $("input#selector_one");
 	 var $_magic = $("input#magic-butt");
 	 $($_magic).on('mousedown', function() {
-	 	$_one.hide('blind');
-	 	$_magic.val("double-click");
+	 	$_one.hide('swing');
+	 	$_magic.val("ボタンの魔法");
 	 });
 
 	 // var delayMillis = 1000;
@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 
 	 $($_magic).on('dblclick', function() {
-		$_one.show('blind');
+		$_one.show('swing');
 		$_magic.val("魔法のボタン");
 	});
 
@@ -36,7 +36,7 @@ $(document).ready(function(){
 
 
 	// button 押下で発火
-	$_cnt.on('mousedown' , function (){
+	$_cnt.on('mousedown' , function() {
 		var len = $_two.val().length;
 		if (len === 0) return false;
 		alert(len + "文字");
@@ -59,9 +59,9 @@ $(document).ready(function(){
 	// 	alert($_two.val().length + "文字");
 	// });
 	
-	var $_inagon = $("img#inagon");
-	$_inagon.on('mouseover', function(){
-	  $_inagon.draggable();
+	var $inagon = $("img#inagon");
+	$inagon.on('mouseover', function() {
+	  $inagon.draggable();
 	});
 	
 });
