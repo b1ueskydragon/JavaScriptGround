@@ -1,7 +1,7 @@
 $(function() {
 	function some_func() {
 		document.write('<br>');
-		document.write('<input value=" Hi I \'m DOM in js page "></input>');
+		document.write('<p> Hi I \'m DOM in js page </p>');
     }
 
     some_func();
