@@ -13,6 +13,7 @@
 		$(function() {
 			alert('ready 中の script は DOM が読み込まれたら読み込まれます');
 			document.write('<p> どどどどむ </p>');
+			some_func(); // これが include.js にて呼ばれる時と、ここで呼ばれる時の違いは？
 		});
 		alert('<body> 下の script です');
 	</script>
