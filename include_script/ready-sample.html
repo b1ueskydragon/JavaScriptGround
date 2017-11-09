@@ -8,11 +8,11 @@
 	<body>
 		<script>alert('Hi I \'m alert in body. Now I will take a DOM in here... ');</script>
 		<script>document.write('<button> Hi I \'m DOM in this page </button>');</script>
-		<script>document.write('<p> どどどどむ </p>');</script>
 	<body>
 	<script>
 		$(function() {
 			alert('ready 中の script は DOM が読み込まれたら読み込まれます');
+			document.write('<p> どどどどむ </p>');
 		});
 		alert('<body> 下の script です');
 	</script>
