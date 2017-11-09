@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script>alert('jquery library 読み込まれます')</script>
+		<script src="include.js"></script>
+		<script>alert('inlude.js 読み込まれます')</script>
+	</head>
+	<body>
+		<script>alert('Hi I \'m alert in body. Now I will take a DOM in here... ');</script>
+		<script>document.write('<button> Hi I \'m DOM in this page </button>');</script>
+	<body>
+	<script>
+		alert('<body> 下の script です');
+		$(function() {
+			alert('ready 中の script です');
+		});
+	</script>
+</html>
