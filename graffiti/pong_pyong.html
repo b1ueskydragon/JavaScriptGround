@@ -1,16 +1,17 @@
+<!DOCTYPE html>
 <html>
-	<div align='center'>
-		<input id="mybutt" type="button" value="ぽん!" onclick="add()" style="width: 100px; height: 100px;"></input>
-		<div id="myobj"></div>
-	</div>
-</html>
+<title>ぽん</title>
+<head>
+   <script type="text/javascript" charset="UTF-8" src="./pong_pyong.js"></script>
+</head>
+<body>
+    <div align='center'>
+        <input id="mybutt" type="button" value="ぽん!" onclick="pongJs._add()" style="width: 100px; height: 100px;"></input>
+        <div id="myobj"></div>
+    </div>
+</body>
 <script type="text/javascript">
-  function add() {
-    var myinput = document.createElement('input');
-    myinput.setAttribute('type', 'button');
-    myinput.setAttribute('value', 'ぴょん');
-    var myobj = document.getElementById('myobj');
-    myobj.appendChild(document.createElement('br'));
-    myobj.appendChild(myinput);
- };
+ var pongJs = new PongPyong();
+ window.onload = pongJs.initialize();
 </script>
+</html>
