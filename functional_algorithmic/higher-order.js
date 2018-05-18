@@ -24,7 +24,7 @@ var map = Array.prototype.map ? // 組み込み map が存在したらそれを�
   } :
   function(a, f) {
     var res = [];
-    for(var i; i < a.length; i++) {
+    for(var i = 0, len = a.length; i < len; i++) {
       if (i in a) {
         res[i] = f.call(null, a[i], i, a);
       }
