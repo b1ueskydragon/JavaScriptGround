@@ -18,15 +18,15 @@ var odd = not(even);
 
 
 // implements `map`
-var map = Array.prototype.map ? // 組み込み map が存在したらそれを使う.
-  function(a, f) {
+var map = Array.prototype.map ? // returns native builtin map func if it is exists.
+  function(a, f) { // a is an array, f is a func `increment`.
     return a.map(f);
   } :
   function(a, f) {
     var res = [];
     for(var i = 0, len = a.length; i < len; i++) {
       if (i in a) {
-        res[i] = f.call(null, a[i], i, a);
+        res[i] = f.call(this, a[i]); // param this should be undefined.
       }
     }
     return res;
@@ -44,4 +44,4 @@ var increment = function(x) {
 
 var incrementer = mapper(increment);
 
-incrementer([1, 2, 3])
+incrementer([10, 20, 30])
