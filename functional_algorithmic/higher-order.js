@@ -25,8 +25,11 @@ var map = Array.prototype.map ? // returns native builtin map func if it is exis
   function(a, f) {
     var res = [];
     for(var i = 0, len = a.length; i < len; i++) {
-      if (i in a) {
-        res[i] = f.call(this, a[i]); // param this should be undefined.
+      if (i in a) { // i is index.
+        // thisArg: f の this としたいオブジェクトを指定.
+        // undefined や nullを指定すると, 暗黙的にグローバルオブジェクトに変換.
+        // arg1: f に渡す引数.
+        res[i] = f.call(null, a[i]);
       }
     }
     return res;
