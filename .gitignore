@@ -2,3 +2,5 @@
 .idea/
 
 console.js
+
+*.DS_Store
