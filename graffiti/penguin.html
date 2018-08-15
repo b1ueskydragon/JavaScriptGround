@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type = "text/javascript" src = "./penguin.js"></script>
+  <title>Console</title>
+</head>
+who's penguin?
+</html>
+
+<script type="text/javascript">
+window.onload = function() {
+  penguin.Handler = new penguin.Handler({
+    msgs: {
+      big: "BIG PENGUIN",
+      small: "SMALL PENGUIN",
+      my: "MY PENGUIN",
+      your: "YOUR PENGUIN"
+    }
+  });
+};
+</script>
